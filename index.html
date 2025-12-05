@@ -223,8 +223,278 @@
                         orchestration.
                     </p>
                 </header>
-
                 <div class="projects-grid" aria-label="Project portfolio">
+                    <!-- 11. CloudInfra Deploy Engine v2 -->
+                    <article class="project-card" id="project-cloudinfra-deploy-engine-v2">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/cloudinfra-deploy-engine-architecture.svg"
+                                alt="CloudInfra Deploy Engine v2 web dashboard orchestrating Terraform deployments on AWS"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">CloudInfra Deploy Engine v2</h3>
+                            <p class="project-card__tagline">
+                                Full-stack web platform to deploy AWS infrastructure from a browser using Terraform
+                                templates or custom ZIP projects — with live logs, outputs, and one-click destroy.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Python, Flask, Terraform, AWS (EC2, VPC, ALB, ASG, RDS, EKS, S3,
+                                CloudFront),
+                                SQLite, Jinja2, TailwindCSS, GitHub
+                            </p>
+                        </div>
+
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-cloudinfra-deploy-engine-v2-toggle"
+                                class="project-toggle">
+
+                            <label for="project-cloudinfra-deploy-engine-v2-toggle"
+                                class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        CloudInfra Deploy Engine v2 is a web-based Terraform automation platform. It
+                                        lets you choose
+                                        pre-built AWS templates or upload your own Terraform project as a ZIP file,
+                                        then runs <code>terraform init</code>, <code>plan</code>, <code>apply</code>,
+                                        and
+                                        <code>destroy</code> from a secure dashboard. Each job has its own logs and
+                                        outputs so
+                                        you can see exactly what infrastructure was created.
+                                    </p>
+
+                                    <h5>Core Features</h5>
+                                    <ul>
+                                        <li>👤 <strong>Secure login &amp; dashboard</strong> – session-based auth, each
+                                            user sees only their
+                                            own jobs.</li>
+                                        <li>📦 <strong>Template mode</strong> – one-click deploy for curated AWS
+                                            templates:
+                                            web server, VPC, S3 + CloudFront, two-tier app (EC2 + RDS), EKS, ALB + ASG,
+                                            and a hardened secure web hosting stack.
+                                        </li>
+                                        <li>🧩 <strong>Custom mode</strong> – upload any Terraform project as a
+                                            <code>.zip</code> and run it from the browser.
+                                        </li>
+                                        <li>📜 <strong>Live log streaming</strong> – terminal-style view in the browser,
+                                            auto-refreshing while Terraform runs.
+                                        </li>
+                                        <li>🧾 <strong>Outputs viewer</strong> – stores and shows Terraform outputs
+                                            (IPs, DNS names, endpoints, IDs) in a clean JSON-style layout.
+                                        </li>
+                                        <li>🗑️ <strong>Destroy from UI</strong> – confirm AWS credentials and trigger
+                                            <code>terraform destroy</code> safely from the dashboard.
+                                        </li>
+                                    </ul>
+
+                                    <h5>Architecture</h5>
+                                    <p>
+                                        The app is split into a <strong>Flask backend</strong> and an
+                                        <strong>infra templates</strong> layer:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Web frontend</strong> – Jinja2 templates (login, dashboard, template
+                                            forms,
+                                            custom upload, logs, outputs) styled with Tailwind + custom CSS.</li>
+                                        <li><strong>Flask backend</strong> – handles authentication, job model (SQLite),
+                                            file uploads, parameter handling, and spawning Terraform runners.</li>
+                                        <li><strong>Terraform runner</strong> – per-job workspace that executes
+                                            <code>terraform init/apply/destroy</code>, captures logs and outputs, and
+                                            writes them back for the UI.
+                                        </li>
+                                        <li><strong>AWS layer</strong> – EC2, VPC, ALB, ASG, RDS, EKS, S3, CloudFront,
+                                            etc.
+                                            are provisioned via modules in <code>infra/templates/aws/</code>.
+                                        </li>
+                                    </ul>
+
+                                    <h5>Project Structure</h5>
+                                    <ul>
+                                        <li><code>backend/</code> – <code>app.py</code>, models, utilities
+                                            (e.g. <code>terraform_runner.py</code>), templates, and static CSS.</li>
+                                        <li><code>infra/templates/aws/</code> – reusable Terraform modules like
+                                            <code>web_server</code>, <code>vpc_basic</code>,
+                                            <code>s3_cloudfront</code>, <code>two_tier_app</code>,
+                                            <code>eks_basic</code>,
+                                            <code>alb_asg</code>, and <code>secure_web_hosting</code>.
+                                        </li>
+                                        <li><code>requirements.txt</code> – Python dependencies for the Flask app.</li>
+                                        <li><code>.gitignore</code> – ignores Terraform state, caches, venv, and
+                                            secrets.</li>
+                                    </ul>
+
+                                    <h5>Security &amp; Best Practices</h5>
+                                    <ul>
+                                        <li>AWS credentials are provided per-run through forms and passed as environment
+                                            variables to Terraform (not stored in Git).</li>
+                                        <li>Designed for use with a dedicated, least-privilege IAM user and budget
+                                            alerts.</li>
+                                        <li>Terraform state and workspace directories are kept local to the runner
+                                            machine, not exposed to the UI.</li>
+                                    </ul>
+
+                                    <h5>What I Learned</h5>
+                                    <ul>
+                                        <li>How to orchestrate Terraform as a long-running subprocess from a web app
+                                            while keeping the UX
+                                            responsive.</li>
+                                        <li>Designing a job model and dashboard that make infra operations traceable and
+                                            auditable.</li>
+                                        <li>Packaging multiple AWS reference architectures as reusable Terraform
+                                            templates for students and
+                                            beginners.</li>
+                                    </ul>
+
+                                    <label for="project-cloudinfra-deploy-engine-v2-toggle"
+                                        class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711/cloudinfra-deploy-engine-v2" class="btn btn--ghost"
+                                target="_blank" rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+                    <!-- 10. CloudInfra Deploy Engine -->
+                    <article class="project-card" id="project-cloudinfra-deploy-engine">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/16.svg"
+                                alt="CloudInfra Deploy Engine Flask UI controlling Terraform deployments (inferred)"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">CloudInfra Deploy Engine</h3>
+                            <p class="project-card__tagline">
+                                Flask-based DevOps dashboard that runs Terraform init/validate/plan/apply/destroy from a
+                                web UI.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Python, Flask, Terraform, AWS EC2, Route 53, Security Groups,
+                                GitHub Actions (optional)
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-cloudinfra-deploy-engine-toggle" class="project-toggle">
+
+                            <label for="project-cloudinfra-deploy-engine-toggle"
+                                class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        CloudInfra Deploy Engine is a DevOps-friendly automation console that lets users
+                                        drive Terraform
+                                        commands via a browser-based dashboard, provisioning and managing AWS
+                                        infrastructure through a
+                                        guided UI instead of direct CLI usage.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/cloudinfra-deploy-engine-architecture.svg"
+                                            alt="Flask backend orchestrating Terraform CLI and AWS infrastructure (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Flask app executes Terraform in a controlled environment, surfaces logs to
+                                            the UI, and provisions
+                                            AWS components such as EC2, Route 53 records, and optional S3 storage.
+                                            (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Flask backend (<code>app.py</code>) to orchestrate Terraform CLI commands
+                                        </li>
+                                        <li>Terraform configuration (<code>terraform/</code> with main.tf, variables.tf,
+                                            outputs.tf, provider.tf)</li>
+                                        <li>UI templates (<code>templates/index.html</code>) with dashboard views</li>
+                                        <li>Optional static assets in <code>static/</code></li>
+                                        <li>Route 53 hosted zones and EC2 instances for website deployment</li>
+                                    </ul>
+
+                                    <h5>CI/CD Snippet (from README)</h5>
+                                    <pre class="code-block"><code>name: Terraform CI
+
+                            on: [push, pull_request]
+
+                            jobs:
+                              terraform:
+                                runs-on: ubuntu-latest
+
+                                steps:
+                                  - uses: actions/checkout@v4
+
+                                  - name: Setup Terraform
+                                    uses: hashicorp/setup-terraform@v2
+
+                                  - name: Terraform fmt
+                                    run: terraform fmt -check -recursive
+                                    working-directory: ./terraform
+
+                                  - name: Terraform init
+                                    run: terraform init -input=false
+                                    working-directory: ./terraform
+
+                                  - name: Terraform validate
+                                    run: terraform validate
+                                    working-directory: ./terraform</code></pre>
+
+                                    <h5>Security &amp; Cost Controls</h5>
+                                    <ul>
+                                        <li>No <code>terraform.tfvars</code>, state files, or AWS keys are committed to
+                                            Git.</li>
+                                        <li><code>.gitignore</code> excludes Terraform state, virtualenvs, and secrets.
+                                        </li>
+                                        <li>Least-privilege IAM policies recommended for Terraform execution roles.</li>
+                                    </ul>
+
+                                    <h5>How I Built It</h5>
+                                    <p>
+                                        I combined a Flask application with Terraform CLI, designing a clean DevOps
+                                        dashboard to trigger
+                                        <code>init</code>, <code>validate</code>, <code>plan</code>, <code>apply</code>,
+                                        and <code>destroy</code>
+                                        while streaming output into the browser. I structured the Terraform
+                                        configuration under a dedicated
+                                        <code>terraform/</code> directory and added optional CI checks using GitHub
+                                        Actions.
+                                    </p>
+
+                                    <h5>Learnings / Challenges (inferred)</h5>
+                                    <ul>
+                                        <li>Orchestrating long-running Terraform processes from a web server safely.
+                                        </li>
+                                        <li>Handling credentials securely without exposing them to the UI.</li>
+                                        <li>Designing a UX that makes complex infrastructure operations understandable
+                                            and traceable.</li>
+                                    </ul>
+
+                                    <label for="project-cloudinfra-deploy-engine-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/YOUR_USERNAME/CloudInfra-Deploy-Engine" class="btn btn--ghost"
+                                target="_blank" rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Replace <code>YOUR_USERNAME</code> with your GitHub username as shown in the README.
+                            </p>
+                        </div>
+                    </article>
                     <!-- 1. Basic EC2 Deployment -->
                     <article class="project-card" id="project-basic-ec2">
                         <figure class="project-card__thumb">
@@ -333,7 +603,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/aws-website-deployment-series/tree/main/01-basic-ec2-deployment" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -436,7 +706,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/aws-website-deployment-series/tree/main/02-production-ready-deployment" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -531,7 +801,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/aws-website-deployment-series/tree/main/03%E2%80%93%20automated-AMI-Creation-with-EC2-Image-Builder" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -663,7 +933,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/Launch%20an%20EC2%20Instance%20as%20a%20web%20server%20using%20Terraform" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -748,11 +1018,14 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/Project%201%20%3A%20Terraform%20project%20for%20creating%20and%20destroying%20a%20VPC" class="btn btn--ghost"
+                            <a href="https://github.com/your-username/terraform-vpc-project" class="btn btn--ghost"
                                 target="_blank" rel="noopener">
                                 View Repo
                             </a>
-                            
+                            <p class="project-card__note">
+                                Repository URL uses placeholder <code>your-username</code> from README – replace with
+                                your GitHub handle.
+                            </p>
                         </div>
                     </article>
 
@@ -821,7 +1094,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/Project%202%20-%20Access%20S3%20Bucket%20from%20EC2%20Instance%20using%20Terraform" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -876,7 +1149,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/Project%204%20-%20Application%20Load%20Balancer%20with%20EC2%20Instances%20using%20Terraform" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -929,7 +1202,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/S3%20Bucket%20event%20to%20get%20SNS%20Email%20Notification" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
@@ -995,144 +1268,14 @@
                                 </div>
                             </div>
 
-                            <a href="https://github.com/balwant2711/Terraform/tree/main/Two-Tier%20AWS%20VPC%20Infrastructure%20with%20NAT%20Gateway%20" class="btn btn--ghost" target="_blank"
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
                                 rel="noopener">
                                 View Repo
                             </a>
                         </div>
                     </article>
 
-                    <!-- 10. CloudInfra Deploy Engine -->
-                    <article class="project-card" id="project-cloudinfra-deploy-engine">
-                        <figure class="project-card__thumb">
-                            <img src="assets/images/16.svg"
-                                alt="CloudInfra Deploy Engine Flask UI controlling Terraform deployments (inferred)"
-                                loading="lazy">
-                        </figure>
-                        <div class="project-card__body">
-                            <h3 class="project-card__title">CloudInfra Deploy Engine</h3>
-                            <p class="project-card__tagline">
-                                Flask-based DevOps dashboard that runs Terraform init/validate/plan/apply/destroy from a
-                                web UI.
-                            </p>
-                            <p class="project-card__stack">
-                                <strong>Stack:</strong> Python, Flask, Terraform, AWS EC2, Route 53, Security Groups,
-                                GitHub Actions (optional)
-                            </p>
-                        </div>
-                        <div class="project-card__actions">
-                            <input type="checkbox" id="project-cloudinfra-deploy-engine-toggle" class="project-toggle">
 
-                            <label for="project-cloudinfra-deploy-engine-toggle"
-                                class="btn btn--outline project-details__toggle">
-                                View Details
-                            </label>
-
-                            <div class="project-details">
-                                <div class="project-details__content">
-                                    <h4>Overview</h4>
-                                    <p>
-                                        CloudInfra Deploy Engine is a DevOps-friendly automation console that lets users
-                                        drive Terraform
-                                        commands via a browser-based dashboard, provisioning and managing AWS
-                                        infrastructure through a
-                                        guided UI instead of direct CLI usage.
-                                    </p>
-
-                                    <h5>Architecture</h5>
-                                    <figure class="project-figure">
-                                        <img src="assets/images/cloudinfra-deploy-engine-architecture.svg"
-                                            alt="Flask backend orchestrating Terraform CLI and AWS infrastructure (inferred)"
-                                            loading="lazy">
-                                        <figcaption>
-                                            Flask app executes Terraform in a controlled environment, surfaces logs to
-                                            the UI, and provisions
-                                            AWS components such as EC2, Route 53 records, and optional S3 storage.
-                                            (inferred)
-                                        </figcaption>
-                                    </figure>
-
-                                    <h5>Tech Stack &amp; Components</h5>
-                                    <ul>
-                                        <li>Flask backend (<code>app.py</code>) to orchestrate Terraform CLI commands
-                                        </li>
-                                        <li>Terraform configuration (<code>terraform/</code> with main.tf, variables.tf,
-                                            outputs.tf, provider.tf)</li>
-                                        <li>UI templates (<code>templates/index.html</code>) with dashboard views</li>
-                                        <li>Optional static assets in <code>static/</code></li>
-                                        <li>Route 53 hosted zones and EC2 instances for website deployment</li>
-                                    </ul>
-
-                                    <h5>CI/CD Snippet (from README)</h5>
-                                    <pre class="code-block"><code>name: Terraform CI
-
-        on: [push, pull_request]
-
-        jobs:
-          terraform:
-            runs-on: ubuntu-latest
-
-            steps:
-              - uses: actions/checkout@v4
-
-              - name: Setup Terraform
-                uses: hashicorp/setup-terraform@v2
-
-              - name: Terraform fmt
-                run: terraform fmt -check -recursive
-                working-directory: ./terraform
-
-              - name: Terraform init
-                run: terraform init -input=false
-                working-directory: ./terraform
-
-              - name: Terraform validate
-                run: terraform validate
-                working-directory: ./terraform</code></pre>
-
-                                    <h5>Security &amp; Cost Controls</h5>
-                                    <ul>
-                                        <li>No <code>terraform.tfvars</code>, state files, or AWS keys are committed to
-                                            Git.</li>
-                                        <li><code>.gitignore</code> excludes Terraform state, virtualenvs, and secrets.
-                                        </li>
-                                        <li>Least-privilege IAM policies recommended for Terraform execution roles.</li>
-                                    </ul>
-
-                                    <h5>How I Built It</h5>
-                                    <p>
-                                        I combined a Flask application with Terraform CLI, designing a clean DevOps
-                                        dashboard to trigger
-                                        <code>init</code>, <code>validate</code>, <code>plan</code>, <code>apply</code>,
-                                        and <code>destroy</code>
-                                        while streaming output into the browser. I structured the Terraform
-                                        configuration under a dedicated
-                                        <code>terraform/</code> directory and added optional CI checks using GitHub
-                                        Actions.
-                                    </p>
-
-                                    <h5>Learnings / Challenges (inferred)</h5>
-                                    <ul>
-                                        <li>Orchestrating long-running Terraform processes from a web server safely.
-                                        </li>
-                                        <li>Handling credentials securely without exposing them to the UI.</li>
-                                        <li>Designing a UX that makes complex infrastructure operations understandable
-                                            and traceable.</li>
-                                    </ul>
-
-                                    <label for="project-cloudinfra-deploy-engine-toggle" class="project-details__close">
-                                        Close details
-                                    </label>
-                                </div>
-                            </div>
-
-                            <a href="https://github.com/balwant2711/CloudInfra-deploy-engine" class="btn btn--ghost"
-                                target="_blank" rel="noopener">
-                                View Repo
-                            </a>
-                           
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
