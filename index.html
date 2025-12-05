@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Balwant Singh – Cloud / DevOps Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <meta name="description"
+        content="Single-page Cloud / DevOps portfolio for Balwant Singh, showcasing AWS, Terraform, CI/CD, and infrastructure automation projects.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header__inner">
+            <a href="#home" class="logo">
+                <span class="logo__mark">BS</span>
+                <span class="logo__text">Cloud / DevOps Engineer</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <nav class="site-nav" aria-label="Primary">
+                <ul class="site-nav__list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="section section--hero">
+            <div class="container hero__content">
+                <div class="hero__text fade-in">
+                    <p class="hero__eyebrow">Balwant Singh</p>
+                    <h1 class="hero__title">Cloud / DevOps Engineer</h1>
+                    <p class="hero__subtitle">
+                        I design, automate, and operate AWS-based infrastructures using Terraform, CI/CD, and DevOps
+                        best practices
+                        to deliver scalable, reliable, and secure platforms.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">View Projects</a>
+                        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+                    </div>
+                    <ul class="hero__highlights" aria-label="Key focus areas">
+                        <li>Scalability &amp; high availability</li>
+                        <li>Infrastructure as Code (Terraform)</li>
+                        <li>CI/CD &amp; observability</li>
+                        <li>Security &amp; IAM guardrails</li>
+                    </ul>
+                </div>
+                <div class="hero__visual fade-in">
+                    <figure class="hero-diagram">
+                        <img src="assets/images/cloud-overview-architecture.png"
+                            alt="High-level AWS Cloud and DevOps architecture illustration (inferred)" loading="lazy">
+                        <figcaption class="hero-diagram__caption">
+                            Visualizing automated AWS infrastructure with VPCs, EC2, ALB, S3, SNS, and Terraform
+                            pipelines (inferred).
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Skills -->
+        <section id="about" class="section section--about">
+            <div class="container">
+                <header class="section__header">
+                    <h2>About &amp; Skills</h2>
+                    <p>
+                        I build cloud-native infrastructure on AWS using Infrastructure as Code, automate deployments,
+                        and
+                        connect services like EC2, VPC, S3, ALB, SNS, and Route 53 into reliable architectures.
+                    </p>
+                </header>
+
+                <div class="about-layout">
+                    <article class="about-card">
+                        <h3>About Me</h3>
+                        <p>
+                            I learn Cloud &amp; DevOps by building real-world projects on AWS and Terraform, from basic
+                            EC2 website
+                            hosting to production-ready networking with two-tier VPCs, NAT Gateways, load balancers, and
+                            event-driven
+                            architectures. My work emphasizes automation, reproducibility, and security across the full
+                            lifecycle of
+                            cloud infrastructure. (About tone partially inferred)
+                        </p>
+                        <p>
+                            I focus on clear, documented workflows: plan ↠ apply ↠ validate ↠ destroy, ensuring
+                            environments are
+                            easy to spin up, test, and tear down to optimize cost and reduce operational risk.
+                            (inferred)
+                        </p>
+                    </article>
+
+                    <section class="skills-card" aria-labelledby="skills-heading">
+                        <h3 id="skills-heading">Skills Overview</h3>
+
+                        <div class="skills-grid">
+                            <div class="skills-group">
+                                <h4>Cloud Platforms</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">AWS</span>
+                                    <span class="badge">Azure (inferred)</span>
+                                    <span class="badge">GCP (inferred)</span>
+                                    <span class="badge">Heroku (inferred)</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <h4>Infrastructure as Code</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">Terraform</span>
+                                    <span class="badge">Modules &amp; variables</span>
+                                    <span class="badge">State management (inferred)</span>
+                                    <span class="badge">Ansible (inferred)</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <h4>CI/CD &amp; Automation</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">GitHub Actions</span>
+                                    <span class="badge">Terraform CLI</span>
+                                    <span class="badge">Jenkins (inferred)</span>
+                                    <span class="badge">Flask-based automation</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <h4>Containers &amp; Orchestration</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">Docker (inferred)</span>
+                                    <span class="badge">Kubernetes / EKS (inferred)</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <h4>Monitoring &amp; Security</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">CloudWatch (inferred)</span>
+                                    <span class="badge">CloudTrail (inferred)</span>
+                                    <span class="badge">IAM Roles &amp; Policies</span>
+                                    <span class="badge">Security Groups</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-group">
+                                <h4>Languages &amp; Tooling</h4>
+                                <div class="skill-badges">
+                                    <span class="badge">Python</span>
+                                    <span class="badge">Bash</span>
+                                    <span class="badge">HCL</span>
+                                    <span class="badge">YAML</span>
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">Git</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-bars" aria-label="Skill focus areas (inferred)">
+                            <div class="skills-bars__item">
+                                <div class="skills-bars__label">
+                                    <span>Infrastructure as Code (Terraform)</span>
+                                    <span>90% (inferred)</span>
+                                </div>
+                                <div class="skills-bars__track">
+                                    <span class="skills-bars__value skills-bars__value--iac"></span>
+                                </div>
+                            </div>
+                            <div class="skills-bars__item">
+                                <div class="skills-bars__label">
+                                    <span>AWS Networking &amp; VPC Design</span>
+                                    <span>85% (inferred)</span>
+                                </div>
+                                <div class="skills-bars__track">
+                                    <span class="skills-bars__value skills-bars__value--networking"></span>
+                                </div>
+                            </div>
+                            <div class="skills-bars__item">
+                                <div class="skills-bars__label">
+                                    <span>CI/CD &amp; Automation</span>
+                                    <span>80% (inferred)</span>
+                                </div>
+                                <div class="skills-bars__track">
+                                    <span class="skills-bars__value skills-bars__value--cicd"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section section--projects">
+            <div class="container">
+                <header class="section__header">
+                    <h2>Projects</h2>
+                    <p>
+                        A curated set of Cloud and DevOps projects built on AWS, Terraform, and automation workflows —
+                        from single EC2 web servers to two-tier VPC infrastructures and UI-driven Terraform
+                        orchestration.
+                    </p>
+                </header>
+
+                <div class="projects-grid" aria-label="Project portfolio">
+                    <!-- 1. Basic EC2 Deployment -->
+                    <article class="project-card" id="project-basic-ec2">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/basic-ec2-deployment-architecture.svg"
+                                alt="Basic EC2 deployment architecture on AWS with security group and public IP (inferred)"
+                                loading="lazy">
+                        </figure>
+
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Basic EC2 Deployment</h3>
+                            <p class="project-card__tagline">
+                                First portfolio website deployment on AWS EC2 (Amazon Linux) using Apache and GitHub
+                                integration.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> AWS EC2, Amazon Linux 2, Apache HTTP Server, Security Groups,
+                                Git &amp; GitHub, SSH
+                            </p>
+                        </div>
+
+                        <div class="project-card__actions">
+                            <!-- Hidden toggle controller -->
+                            <input type="checkbox" id="project-basic-ec2-toggle" class="project-toggle">
+
+                            <!-- View Details as label -->
+                            <label for="project-basic-ec2-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <!-- Glass details panel -->
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project demonstrates the first step in deploying a portfolio website on AWS
+                                        EC2, installing an
+                                        Apache web server, and pulling website files directly from GitHub onto the
+                                        instance.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/basic-ec2-deployment-diagram.svg"
+                                            alt="Single EC2 instance behind a security group serving HTTP traffic (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            EC2 instance (Amazon Linux 2) reachable via HTTP and SSH, hosting a static
+                                            portfolio site. (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Amazon EC2 (t2.micro, Free Tier)</li>
+                                        <li>Amazon Linux 2</li>
+                                        <li>Apache HTTP Server (httpd)</li>
+                                        <li>Security Group allowing HTTP (80) and SSH (22)</li>
+                                        <li>Git &amp; GitHub for website code deployment</li>
+                                    </ul>
+
+                                    <h5>IaC &amp; Automation</h5>
+                                    <p>
+                                        Instance provisioning and configuration are described step by step (via console
+                                        and commands).
+                                        Future iterations can be migrated to Terraform or EC2 Image Builder for full
+                                        automation. (inferred)
+                                    </p>
+
+                                    <h5>CI/CD &amp; Monitoring</h5>
+                                    <ul>
+                                        <li>Manual Git-based deployment from GitHub to EC2.</li>
+                                        <li>(inferred) Can be extended using GitHub Actions to build and sync website
+                                            files to EC2.</li>
+                                        <li>(inferred) CloudWatch metrics and basic status checks for instance health
+                                            and CPU usage.</li>
+                                    </ul>
+
+                                    <h5>Security &amp; Cost Optimization</h5>
+                                    <ul>
+                                        <li>Minimal Security Group rules (HTTP + SSH) to reduce attack surface.</li>
+                                        <li>Free-tier eligible t2.micro instance to keep costs low.</li>
+                                        <li>(inferred) SSH key–based login with no password authentication.</li>
+                                        <li>(inferred) Stop / terminate instance when not in active use.</li>
+                                    </ul>
+
+                                    <h5>How I Built It</h5>
+                                    <p>
+                                        Using the AWS Console, I launched an EC2 instance, configured the Security
+                                        Group, connected via SSH,
+                                        installed Apache, and cloned my portfolio website from GitHub into
+                                        <code>/var/www/html</code>.
+                                    </p>
+
+                                    <h5>Learnings / Challenges (inferred)</h5>
+                                    <ul>
+                                        <li>Understanding EC2 networking and Security Group rules.</li>
+                                        <li>Mapping Linux file structure to Apache’s document root.</li>
+                                        <li>Troubleshooting HTTP access and verifying that the site served correctly
+                                            from the public IP.</li>
+                                    </ul>
+
+                                    <!-- Close details -->
+                                    <label for="project-basic-ec2-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Repo link points to GitHub profile – replace with the specific repository URL.
+                                (inferred)
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 2. Production-Ready Deployment -->
+                    <article class="project-card" id="project-prod-ec2">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/3.svg"
+                                alt="Production-ready EC2 website architecture with Elastic IP, Route 53, and HTTPS (inferred)"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Production-Ready Deployment</h3>
+                            <p class="project-card__tagline">
+                                Upgrading EC2 hosting with Elastic IP, custom domain via Route 53, and HTTPS using Let’s
+                                Encrypt.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> AWS EC2, Elastic IP, Route 53, GoDaddy DNS, Let’s Encrypt,
+                                SSL/TLS
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-prod-ec2-toggle" class="project-toggle">
+
+                            <label for="project-prod-ec2-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project upgrades the basic EC2 deployment into a production-ready
+                                        environment using a static
+                                        Elastic IP, a custom domain managed via GoDaddy and AWS Route 53, and HTTPS
+                                        enforced with Let’s Encrypt.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/4.svg"
+                                            alt="AWS EC2 instance with Elastic IP and Route 53 hosted zone pointing to domain over HTTPS (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Domain registrar (GoDaddy) delegates DNS to Route 53, which routes traffic
+                                            over HTTPS to EC2.
+                                            (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Elastic IP associated with EC2 instance</li>
+                                        <li>GoDaddy domain pointing NS records to Route 53</li>
+                                        <li>Route 53 Hosted Zone and A Record for domain → Elastic IP</li>
+                                        <li>Let’s Encrypt certificate via <code>certbot</code> for HTTPS</li>
+                                    </ul>
+
+                                    <h5>IaC &amp; CI/CD</h5>
+                                    <p>
+                                        The deployment is primarily console and CLI-driven, with clear steps to evolve
+                                        toward full
+                                        Infrastructure as Code and automated pipelines using Terraform and CI/CD tools.
+                                        (inferred)
+                                    </p>
+
+                                    <h5>Monitoring &amp; Security</h5>
+                                    <ul>
+                                        <li>HTTPS ensures encrypted communication between clients and the EC2-hosted
+                                            website.</li>
+                                        <li>(inferred) CloudWatch alarms can track instance availability and HTTP
+                                            response codes.</li>
+                                        <li>(inferred) Regular Let’s Encrypt renewals automated via cron jobs.</li>
+                                    </ul>
+
+                                    <h5>Outcomes / Metrics (inferred)</h5>
+                                    <ul>
+                                        <li>Stable, bookmarkable domain instead of changing public IP.</li>
+                                        <li>Improved user trust and SEO through HTTPS &amp; SSL/TLS.</li>
+                                        <li>Production-style setup ready for further scaling (ASG + ALB).</li>
+                                    </ul>
+
+                                    <h5>Learnings / Challenges (inferred)</h5>
+                                    <ul>
+                                        <li>DNS propagation and troubleshooting NS / A records.</li>
+                                        <li>Correctly configuring <code>certbot</code> with Apache on Amazon Linux.</li>
+                                        <li>Aligning registrar DNS with AWS Route 53 hosted zones.</li>
+                                    </ul>
+
+                                    <label for="project-prod-ec2-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Repo link points to GitHub profile – replace with the specific project folder.
+                                (inferred)
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 3. Automated AMI Creation with EC2 Image Builder -->
+                    <article class="project-card" id="project-ami-image-builder">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/5.svg"
+                                alt="EC2 Image Builder pipeline creating reusable AMIs for web servers (inferred)"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Automated AMI Creation (EC2 Image Builder)</h3>
+                            <p class="project-card__tagline">
+                                Automated AMI builds with EC2 Image Builder for reusable, consistent web server images.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> AWS EC2 Image Builder, EC2, IAM Roles, Custom Components, Image
+                                Recipes
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-ami-image-builder-toggle" class="project-toggle">
+
+                            <label for="project-ami-image-builder-toggle"
+                                class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project uses EC2 Image Builder to automate the creation of AMIs with a
+                                        pre-installed web
+                                        server, ensuring faster and more consistent deployments across environments.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/6.svg"
+                                            alt="Image Builder pipeline with components, recipes, and build EC2 instance (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Image Builder pipeline provisions a build EC2 instance, applies components,
+                                            and outputs a reusable
+                                            AMI for downstream use. (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Custom Image Builder Component for web server installation</li>
+                                        <li>Image Recipe referencing base Amazon Linux AMI and components</li>
+                                        <li>Infrastructure Configuration for build host and IAM role</li>
+                                        <li>Image Pipeline to orchestrate periodic or manual AMI builds</li>
+                                    </ul>
+
+                                    <h5>IaC &amp; Automation</h5>
+                                    <p>
+                                        The AMI creation process is fully automated using Image Builder pipelines,
+                                        making it easy to roll
+                                        out updated images for EC2-based environments. Terraform can orchestrate these
+                                        pipelines as part of
+                                        a broader IaC approach. (inferred)
+                                    </p>
+
+                                    <h5>Monitoring &amp; Security</h5>
+                                    <ul>
+                                        <li>(inferred) CloudWatch logs for Image Builder pipeline status and failures.
+                                        </li>
+                                        <li>IAM roles restrict pipeline permissions to the minimum needed.</li>
+                                        <li>(inferred) Regular AMI refresh schedule to include latest patches.</li>
+                                    </ul>
+
+                                    <h5>Outcomes / Metrics (inferred)</h5>
+                                    <ul>
+                                        <li>Reduced time-to-provision for new web server instances.</li>
+                                        <li>Consistent configuration across all deployed EC2 instances.</li>
+                                        <li>Improved reliability through standardized base images.</li>
+                                    </ul>
+
+                                    <label for="project-ami-image-builder-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Link is a placeholder to profile – point to the specific Image Builder project folder.
+                                (inferred)
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 4. EC2 Apache Web Server using Terraform -->
+                    <article class="project-card" id="project-terraform-ec2">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/7.svg" alt="Terraform-managed EC2 Apache web server architecture"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">EC2 Apache Web Server using Terraform</h3>
+                            <p class="project-card__tagline">
+                                Provision an EC2 instance with Apache web server using Terraform and user_data
+                                automation.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform (HCL), AWS EC2, Security Groups, Amazon Linux 2,
+                                Apache HTTPD
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-terraform-ec2-toggle" class="project-toggle">
+
+                            <label for="project-terraform-ec2-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project provisions an EC2 instance using Terraform, configures Security
+                                        Groups for HTTP access,
+                                        and uses <code>user_data</code> to automatically install and start Apache,
+                                        hosting a simple HTML page.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/8.svg"
+                                            alt="Terraform managing EC2 instance and security group for web traffic (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Terraform defines the EC2 instance and Security Group, exposing HTTP to the
+                                            internet while
+                                            keeping configuration in version-controlled HCL. (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>IaC Snippet (from README)</h5>
+                                    <pre class="code-block"><code>provider "aws" {
+          region     = "${var.region}"
+          access_key = "${var.access_key}"
+          secret_key = "${var.secret_key}"
+        }
+
+        resource "aws_security_group" "web-server" {
+          name        = "web-server"
+          description = "Allow incoming HTTP Connections"
+
+          ingress {
+            from_port   = 80
+            to_port     = 80
+            protocol    = "tcp"
+            cidr_blocks = ["0.0.0.0/0"]
+          }
+
+          egress {
+            from_port   = 0
+            to_port     = 0
+            protocol    = "-1"
+            cidr_blocks = ["0.0.0.0/0"]
+          }
+        }
+
+        resource "aws_instance" "web-server" {
+          ami             = "ami-0150ccaf51ab55a51"
+          instance_type   = "t2.micro"
+          key_name        = "portfolio"
+          security_groups = ["${aws_security_group.web-server.name}"]
+
+          user_data = &lt;&lt;-EOF
+            #!/bin/bash
+            sudo su
+            yum update -y
+            yum install httpd -y
+            systemctl start httpd
+            systemctl enable httpd
+            echo "&lt;html&gt;&lt;h1&gt; Welcome to Cetpa Infotech. Happy Learning... &lt;/h1&gt;&lt;/html&gt;" &gt;&gt; /var/www/html/index.html
+          EOF
+
+          tags = {
+            Name = "web_instance"
+          }
+        }</code></pre>
+
+                                    <p class="project-details__note">
+                                        Sensitive values (like real access keys in <code>terraform.tfvars</code>) are
+                                        never committed to Git.
+                                    </p>
+
+                                    <h5>CI/CD &amp; Automation</h5>
+                                    <ul>
+                                        <li>Terraform workflow: <code>terraform init</code>, <code>plan</code>,
+                                            <code>apply</code>, <code>destroy</code>.
+                                        </li>
+                                        <li>(inferred) Terraform fmt/validate can be wired into GitHub Actions for basic
+                                            CI checks.</li>
+                                    </ul>
+
+                                    <h5>Monitoring &amp; Security (inferred)</h5>
+                                    <ul>
+                                        <li>Use CloudWatch to monitor instance metrics and set alarms on CPU or status
+                                            checks.</li>
+                                        <li>Restrict SSH access by IP and keep Security Groups minimal.</li>
+                                        <li>Destroy resources after testing to avoid additional AWS charges.</li>
+                                    </ul>
+
+                                    <label for="project-terraform-ec2-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Create & Destroy VPC using Terraform -->
+                    <article class="project-card" id="project-terraform-vpc">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/9.svg"
+                                alt="Terraform-managed VPC with subnets, route tables, and internet gateway (inferred)"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Create &amp; Destroy VPC using Terraform</h3>
+                            <p class="project-card__tagline">
+                                Beginner-friendly VPC provisioning with subnets, route tables, and Internet Gateway
+                                using Terraform.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform, AWS VPC, Subnets, Route Tables, Internet Gateway
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-terraform-vpc-toggle" class="project-toggle">
+
+                            <label for="project-terraform-vpc-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project automates the creation and teardown of an AWS VPC using Terraform,
+                                        showcasing a complete
+                                        init → plan → apply → destroy workflow and introducing reusable modules for
+                                        networking.
+                                    </p>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Custom VPC with CIDR block</li>
+                                        <li>Public subnets</li>
+                                        <li>Internet Gateway and route tables</li>
+                                        <li>Outputs for VPC ID and other identifiers</li>
+                                    </ul>
+
+                                    <h5>IaC Snippet (inferred)</h5>
+                                    <pre class="code-block"><code># (inferred structure based on README)
+        resource "aws_vpc" "main" {
+          cidr_block = var.vpc_cidr
+          tags = { Name = "demo-vpc" }
+        }
+
+        resource "aws_internet_gateway" "igw" {
+          vpc_id = aws_vpc.main.id
+        }
+
+        resource "aws_subnet" "public" {
+          vpc_id                  = aws_vpc.main.id
+          cidr_block              = var.public_subnet_cidr
+          map_public_ip_on_launch = true
+        }</code></pre>
+
+                                    <p class="project-details__note">
+                                        The exact Terraform code lives in the project repo; this snippet is based on the
+                                        documented structure. (inferred)
+                                    </p>
+
+                                    <h5>Monitoring, Security &amp; Cost (inferred)</h5>
+                                    <ul>
+                                        <li>Use tagging to track cost per environment (dev/test).</li>
+                                        <li>Leverage Flow Logs and CloudTrail for network and API visibility.</li>
+                                        <li>Destroy infrastructure with <code>terraform destroy</code> when not needed
+                                            to avoid charges.</li>
+                                    </ul>
+
+                                    <label for="project-terraform-vpc-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/your-username/terraform-vpc-project" class="btn btn--ghost"
+                                target="_blank" rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Repository URL uses placeholder <code>your-username</code> from README – replace with
+                                your GitHub handle.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 6. Access S3 from EC2 using Terraform -->
+                    <article class="project-card" id="project-terraform-s3">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/10.svg"
+                                alt="EC2 instance accessing S3 bucket via IAM role (inferred)" loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Access S3 from EC2 using Terraform</h3>
+                            <p class="project-card__tagline">
+                                Securely serve HTML from S3 through an EC2-hosted Apache web server using IAM roles.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform, AWS EC2, S3, IAM Roles &amp; Instance Profiles,
+                                Security Groups, Apache
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-terraform-s3-toggle" class="project-toggle">
+
+                            <label for="project-terraform-s3-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project automates an EC2 + S3 integration where HTML files are stored in S3
+                                        and fetched by an
+                                        EC2 instance using an IAM role instead of static credentials, then served
+                                        through Apache.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/11.svg"
+                                            alt="Architecture diagram: S3 bucket, EC2 instance with IAM role, security group (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            S3 bucket holds static HTML; EC2 uses an IAM role to read objects securely
+                                            and serve them to users. (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Key Resources</h5>
+                                    <ul>
+                                        <li><code>aws_s3_bucket</code> and <code>aws_s3_bucket_object</code></li>
+                                        <li><code>aws_iam_role</code> and <code>aws_iam_instance_profile</code></li>
+                                        <li><code>aws_security_group</code> for HTTP access</li>
+                                        <li><code>aws_instance</code> with Apache installed via user_data</li>
+                                    </ul>
+
+                                    <h5>Monitoring &amp; Security (inferred)</h5>
+                                    <ul>
+                                        <li>IAM role avoids hardcoding AWS credentials.</li>
+                                        <li>CloudTrail can track S3 access via the role.</li>
+                                        <li>S3 bucket policies can further restrict access to only the EC2 role.</li>
+                                    </ul>
+
+                                    <label for="project-terraform-s3-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 7. ALB + EC2 Instances using Terraform -->
+                    <article class="project-card" id="project-terraform-alb">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/12.svg"
+                                alt="Application Load Balancer distributing traffic across two EC2 instances"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Application Load Balancer with EC2 Instances</h3>
+                            <p class="project-card__tagline">
+                                Highly available web architecture using ALB, target groups, and health checks with
+                                Terraform.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform, AWS ALB, EC2, Target Groups, Security Groups, Default
+                                VPC/Subnets
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-terraform-alb-toggle" class="project-toggle">
+
+                            <label for="project-terraform-alb-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project provisions two Apache web server EC2 instances behind an
+                                        Application Load Balancer,
+                                        using target groups and health checks to provide a scalable, fault-tolerant
+                                        setup.
+                                    </p>
+
+                                    <h5>CI/CD &amp; Observability (inferred)</h5>
+                                    <ul>
+                                        <li>Terraform plan/apply manage ALB and EC2 lifecycle.</li>
+                                        <li>CloudWatch monitors ALB request metrics and target health.</li>
+                                        <li>Logs can be pushed to S3 for long-term analysis.</li>
+                                    </ul>
+
+                                    <label for="project-terraform-alb-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 8. S3 Event → SNS Email Notification -->
+                    <article class="project-card" id="project-terraform-s3-sns">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/13.svg"
+                                alt="S3 bucket integrated with SNS topic for email notifications" loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">S3 Event Notifications with SNS</h3>
+                            <p class="project-card__tagline">
+                                Event-driven architecture that triggers SNS email alerts on S3 uploads using Terraform.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform, AWS S3, SNS Topics, SNS Subscriptions, S3 Bucket
+                                Notifications
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-terraform-s3-sns-toggle" class="project-toggle">
+
+                            <label for="project-terraform-s3-sns-toggle"
+                                class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project wires S3 bucket events to SNS, sending email notifications each
+                                        time an object is
+                                        uploaded, fully provisioned and configured via Terraform.
+                                    </p>
+
+                                    <h5>Monitoring &amp; Security (inferred)</h5>
+                                    <ul>
+                                        <li>S3 → SNS events provide near real-time visibility into uploads.</li>
+                                        <li>Policy-secured SNS topic to allow only S3 to publish.</li>
+                                        <li>Email subscription confirmation workflow ensures valid subscribers.</li>
+                                    </ul>
+
+                                    <label for="project-terraform-s3-sns-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 9. Two-Tier VPC with NAT Gateway -->
+                    <article class="project-card" id="project-two-tier-vpc">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/14.svg"
+                                alt="Two-tier VPC with public and private subnets and NAT Gateway" loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Two-Tier AWS VPC with NAT Gateway</h3>
+                            <p class="project-card__tagline">
+                                Production-style two-tier VPC with public and private subnets and NAT Gateway for secure
+                                outbound access.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Terraform, AWS VPC, Subnets, Internet Gateway, NAT Gateway, EC2,
+                                Security Groups, Elastic IP
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-two-tier-vpc-toggle" class="project-toggle">
+
+                            <label for="project-two-tier-vpc-toggle" class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        This project provisions a custom VPC with a public subnet, a private subnet, a
+                                        NAT Gateway for secure
+                                        outbound internet from private EC2 instances, and routing that models real
+                                        production environments.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/15.svg"
+                                            alt="Two-tier VPC with public EC2, private EC2, and NAT Gateway (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Public subnet hosts bastion / web EC2; private subnet hosts internal
+                                            workloads accessing the
+                                            internet via NAT Gateway. (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Monitoring &amp; Security (inferred)</h5>
+                                    <ul>
+                                        <li>Private subnet instances have no public IP, reducing exposure.</li>
+                                        <li>Security Groups separate public and private traffic.</li>
+                                        <li>VPC Flow Logs help analyze allowed/denied traffic.</li>
+                                    </ul>
+
+                                    <label for="project-two-tier-vpc-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/balwant2711" class="btn btn--ghost" target="_blank"
+                                rel="noopener">
+                                View Repo
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 10. CloudInfra Deploy Engine -->
+                    <article class="project-card" id="project-cloudinfra-deploy-engine">
+                        <figure class="project-card__thumb">
+                            <img src="assets/images/16.svg"
+                                alt="CloudInfra Deploy Engine Flask UI controlling Terraform deployments (inferred)"
+                                loading="lazy">
+                        </figure>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">CloudInfra Deploy Engine</h3>
+                            <p class="project-card__tagline">
+                                Flask-based DevOps dashboard that runs Terraform init/validate/plan/apply/destroy from a
+                                web UI.
+                            </p>
+                            <p class="project-card__stack">
+                                <strong>Stack:</strong> Python, Flask, Terraform, AWS EC2, Route 53, Security Groups,
+                                GitHub Actions (optional)
+                            </p>
+                        </div>
+                        <div class="project-card__actions">
+                            <input type="checkbox" id="project-cloudinfra-deploy-engine-toggle" class="project-toggle">
+
+                            <label for="project-cloudinfra-deploy-engine-toggle"
+                                class="btn btn--outline project-details__toggle">
+                                View Details
+                            </label>
+
+                            <div class="project-details">
+                                <div class="project-details__content">
+                                    <h4>Overview</h4>
+                                    <p>
+                                        CloudInfra Deploy Engine is a DevOps-friendly automation console that lets users
+                                        drive Terraform
+                                        commands via a browser-based dashboard, provisioning and managing AWS
+                                        infrastructure through a
+                                        guided UI instead of direct CLI usage.
+                                    </p>
+
+                                    <h5>Architecture</h5>
+                                    <figure class="project-figure">
+                                        <img src="assets/images/cloudinfra-deploy-engine-architecture.svg"
+                                            alt="Flask backend orchestrating Terraform CLI and AWS infrastructure (inferred)"
+                                            loading="lazy">
+                                        <figcaption>
+                                            Flask app executes Terraform in a controlled environment, surfaces logs to
+                                            the UI, and provisions
+                                            AWS components such as EC2, Route 53 records, and optional S3 storage.
+                                            (inferred)
+                                        </figcaption>
+                                    </figure>
+
+                                    <h5>Tech Stack &amp; Components</h5>
+                                    <ul>
+                                        <li>Flask backend (<code>app.py</code>) to orchestrate Terraform CLI commands
+                                        </li>
+                                        <li>Terraform configuration (<code>terraform/</code> with main.tf, variables.tf,
+                                            outputs.tf, provider.tf)</li>
+                                        <li>UI templates (<code>templates/index.html</code>) with dashboard views</li>
+                                        <li>Optional static assets in <code>static/</code></li>
+                                        <li>Route 53 hosted zones and EC2 instances for website deployment</li>
+                                    </ul>
+
+                                    <h5>CI/CD Snippet (from README)</h5>
+                                    <pre class="code-block"><code>name: Terraform CI
+
+        on: [push, pull_request]
+
+        jobs:
+          terraform:
+            runs-on: ubuntu-latest
+
+            steps:
+              - uses: actions/checkout@v4
+
+              - name: Setup Terraform
+                uses: hashicorp/setup-terraform@v2
+
+              - name: Terraform fmt
+                run: terraform fmt -check -recursive
+                working-directory: ./terraform
+
+              - name: Terraform init
+                run: terraform init -input=false
+                working-directory: ./terraform
+
+              - name: Terraform validate
+                run: terraform validate
+                working-directory: ./terraform</code></pre>
+
+                                    <h5>Security &amp; Cost Controls</h5>
+                                    <ul>
+                                        <li>No <code>terraform.tfvars</code>, state files, or AWS keys are committed to
+                                            Git.</li>
+                                        <li><code>.gitignore</code> excludes Terraform state, virtualenvs, and secrets.
+                                        </li>
+                                        <li>Least-privilege IAM policies recommended for Terraform execution roles.</li>
+                                    </ul>
+
+                                    <h5>How I Built It</h5>
+                                    <p>
+                                        I combined a Flask application with Terraform CLI, designing a clean DevOps
+                                        dashboard to trigger
+                                        <code>init</code>, <code>validate</code>, <code>plan</code>, <code>apply</code>,
+                                        and <code>destroy</code>
+                                        while streaming output into the browser. I structured the Terraform
+                                        configuration under a dedicated
+                                        <code>terraform/</code> directory and added optional CI checks using GitHub
+                                        Actions.
+                                    </p>
+
+                                    <h5>Learnings / Challenges (inferred)</h5>
+                                    <ul>
+                                        <li>Orchestrating long-running Terraform processes from a web server safely.
+                                        </li>
+                                        <li>Handling credentials securely without exposing them to the UI.</li>
+                                        <li>Designing a UX that makes complex infrastructure operations understandable
+                                            and traceable.</li>
+                                    </ul>
+
+                                    <label for="project-cloudinfra-deploy-engine-toggle" class="project-details__close">
+                                        Close details
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/YOUR_USERNAME/CloudInfra-Deploy-Engine" class="btn btn--ghost"
+                                target="_blank" rel="noopener">
+                                View Repo
+                            </a>
+                            <p class="project-card__note">
+                                Replace <code>YOUR_USERNAME</code> with your GitHub username as shown in the README.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Case Studies -->
+        <section id="case-studies" class="section section--cases">
+            <div class="container">
+                <header class="section__header">
+                    <h2>Case Studies</h2>
+                    <p>
+                        Selected deep dives into architectures that highlight scalability, reliability, security, and
+                        automation.
+                    </p>
+                </header>
+
+                <div class="cases-grid">
+                    <!-- Case Study 1: CloudInfra Deploy Engine -->
+                    <article class="case-card">
+                        <h3>CloudInfra Deploy Engine – UI-Driven IaC</h3>
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>
+                                Running Terraform purely from CLI makes it harder for non-expert users and teams to
+                                consistently apply
+                                infrastructure changes and see what’s happening in real time. (inferred)
+                            </dd>
+
+                            <dt>Approach</dt>
+                            <dd>
+                                Build a Flask-based dashboard that wraps Terraform CLI commands, validates
+                                configuration, and exposes a
+                                guided workflow for <code>init</code>, <code>validate</code>, <code>plan</code>, and
+                                <code>apply</code>.
+                            </dd>
+
+                            <dt>Architecture</dt>
+                            <dd>
+                                Flask app orchestrating Terraform modules, provisioning AWS resources such as EC2 and
+                                Route 53, with an
+                                import/export configuration panel and optional GitHub Actions CI for format and validate
+                                checks.
+                            </dd>
+
+                            <dt>Implementation</dt>
+                            <dd>
+                                Designed the project with a clear structure: <code>app.py</code>, Terraform
+                                configuration in a
+                                <code>terraform/</code> directory, HTML templates under <code>templates/</code>, and a
+                                screenshots
+                                folder to document the UI. The app runs locally and controls Terraform via shell
+                                execution.
+                            </dd>
+
+                            <dt>Outcomes / Metrics (inferred)</dt>
+                            <dd>
+                                Faster onboarding for team members who can deploy infra from a UI, fewer manual CLI
+                                mistakes, and a
+                                reusable platform for future extensions like ASG, ALB, CloudFront, and WAF integration.
+                            </dd>
+                        </dl>
+                    </article>
+
+                    <!-- Case Study 2: Two-Tier VPC with NAT -->
+                    <article class="case-card">
+                        <h3>Two-Tier AWS VPC with NAT Gateway</h3>
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>
+                                Many workloads require private subnets without direct internet exposure but still need
+                                outbound access
+                                for updates, package downloads, and external APIs. (inferred)
+                            </dd>
+
+                            <dt>Approach</dt>
+                            <dd>
+                                Use Terraform to build a VPC with clearly separated public and private subnets, an
+                                Internet Gateway for
+                                the public tier, and a NAT Gateway plus routing for secure outbound access from the
+                                private tier.
+                            </dd>
+
+                            <dt>Architecture</dt>
+                            <dd>
+                                Custom VPC, public subnet hosting an EC2 instance with public and private IP, private
+                                subnet hosting
+                                internal EC2 instances, NAT Gateway with EIP, and independent route tables for each
+                                tier.
+                            </dd>
+
+                            <dt>Implementation</dt>
+                            <dd>
+                                Implemented Terraform resources for VPC, subnets, route tables and associations,
+                                Internet Gateway,
+                                NAT Gateway, Elastic IP, EC2 instances, and Security Groups. Outputs expose key
+                                identifiers for use in
+                                downstream modules or stacks.
+                            </dd>
+
+                            <dt>Outcomes / Metrics (inferred)</dt>
+                            <dd>
+                                A reusable two-tier networking pattern ready for application stacks, with reduced attack
+                                surface,
+                                production-style routing, and predictable infrastructure lifecycle managed fully via
+                                Terraform.
+                            </dd>
+                        </dl>
+                    </article>
+
+                    <!-- Case Study 3: Automated AMI Pipeline -->
+                    <article class="case-card">
+                        <h3>Automated AMI Creation with EC2 Image Builder</h3>
+                        <dl>
+                            <dt>Problem</dt>
+                            <dd>
+                                Manually configuring EC2 instances after launch increases deployment time and introduces
+                                configuration drift. (inferred)
+                            </dd>
+
+                            <dt>Approach</dt>
+                            <dd>
+                                Use EC2 Image Builder to define components, image recipes, infrastructure configuration,
+                                and a pipeline
+                                that outputs standardized AMIs with pre-installed web servers.
+                            </dd>
+
+                            <dt>Architecture</dt>
+                            <dd>
+                                Image Builder pipeline provisions a temporary build instance, applies custom components
+                                for web server
+                                configuration, validates the result, and publishes an AMI that can be used across
+                                multiple deployments.
+                            </dd>
+
+                            <dt>Implementation</dt>
+                            <dd>
+                                Created custom components, recipes, and pipeline definitions in AWS, along with IAM
+                                roles to securely
+                                access required resources. Validated resulting AMIs by launching them and confirming the
+                                web server
+                                state.
+                            </dd>
+
+                            <dt>Outcomes / Metrics (inferred)</dt>
+                            <dd>
+                                Decreased configuration time for new instances, standardized base images, and a clear
+                                path to scheduled
+                                AMI refreshes integrated with CI/CD pipelines.
+                            </dd>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Notes
+        <section id="blog" class="section section--blog">
+            <div class="container">
+                <header class="section__header">
+                    <h2>Blog &amp; Notes (inferred)</h2>
+                    <p>
+                        Short technical notes and runbooks around Terraform, AWS, and incident postmortems. (inferred)
+                    </p>
+                </header>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3>Postmortem: Failed Terraform Apply on VPC Module (inferred)</h3>
+                        <p>
+                            Lessons from debugging dependency ordering, missing IAM permissions, and incorrect CIDR
+                            overlaps in a VPC
+                            provisioning workflow. (inferred)
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Terraform Tips: Safer <code>destroy</code> in Shared Accounts (inferred)</h3>
+                        <p>
+                            Notes on using workspaces, targeted destroys, and tagging conventions to avoid accidentally
+                            tearing down
+                            shared infrastructure. (inferred)
+                        </p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Runbook: EC2 Website Not Loading over HTTPS (inferred)</h3>
+                        <p>
+                            Step-by-step checks for Security Groups, Route 53, Elastic IP, and Let’s Encrypt certificate
+                            renewal for
+                            production-ready websites. (inferred)
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact -->
+        <section id="contact" class="section section--contact">
+            <div class="container contact-layout">
+                <header class="section__header">
+                    <h2>Contact</h2>
+                    <p>
+                        Interested in Cloud / DevOps roles, platform engineering, or infrastructure automation?
+                        Let’s connect.
+                    </p>
+                </header>
+
+                <div class="contact-card">
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:singh.balwant2711@gmail.com">
+                                balwant@devops.com
+                            </a>
+
+                        </li>
+                        <li>
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/balwant-singh-aa024b37b/" target="_blank"
+                                rel="noopener">
+                                linkedin.com/in/balwant-singh-aa024b37b
+                            </a>
+                        </li>
+                        <li>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/balwant2711" target="_blank" rel="noopener">
+                                github.com/balwant2711
+                            </a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Resume</span>
+                            <a href="assets/Balwant_Singh_Cloud_DevOps_Resume.pdf" target="_blank" rel="noopener">
+                                Download Resume (PDF)
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <p>&copy; <span id="year">2025</span> Balwant Singh. All rights reserved.</p>
+            <p>
+                Built with semantic HTML &amp; CSS only. No JavaScript, no trackers; suitable for privacy-friendly
+                hosting.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
